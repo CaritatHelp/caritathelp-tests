@@ -9,7 +9,7 @@ layout: default
 		</h1>
 		{% for post in site.categories.[{{page.ref}}] %}
 		  <div class="ui styled accordion">
-		    <a class="post-link" href="#{{page.ref}}-{{post.id}}">
+		    <a class="post-link" href="#{{page.ref}}-{{post.nb}}">
 		      <div class="title">{{ post.title }}</div>
 		    </a>
 		  </div>
@@ -20,7 +20,7 @@ layout: default
 			<i class="zoom icon"></i> Description du test
 		</h1>
 		{% for post in site.categories.[{{page.ref}}] %}
-			<article class="ui card" id="{{page.ref}}-{{post.id}}" style="display: none;">
+			<article class="ui card" id="{{page.ref}}-{{post.nb}}" style="display: none;">
 				<div class="content">
 					<h2 class="header">{{post.title}}</h2>
 				</div>
