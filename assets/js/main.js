@@ -5,4 +5,10 @@ $(document).ready(function() {
 		$('.post-link').removeClass('active');
 		$(this).addClass('active');
 	});
+	var a = window.location.href.indexOf("#");
+	if (a) {
+		$url = window.location.href.substring(a);
+		$('.post-link[href='+$url+']').addClass('active');
+		$($url).show();
+	}
 });

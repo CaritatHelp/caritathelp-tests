@@ -10,7 +10,7 @@ layout: default
         </h3>
         {% for post in site.categories.[{{links.ref}}] %}
           <div class="ui styled accordion">
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <a class="post-link" href="{{site.baseurl | append : links.ref}}#{{links.ref}}-{{post.nb}}">
               <div class="title">{{ post.title }}</div>
             </a>
           </div>

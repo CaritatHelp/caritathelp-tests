@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
+    uglify = require('gulp-uglify'),
     runSequence = require('run-sequence'),
     shell = require('gulp-shell'),
     browserSync = require('browser-sync');
@@ -21,10 +22,11 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-  gulp.src(['scripts/**/*.js'])
-    .pipe(changed('assets/js/'))
+  gulp.src(['scripts/main.js'])
+    .pipe(rename({suffix: '.min'}))
+    .pipe(uglify())
     .pipe(gulp.dest('assets/js/'));
-  gulp.src(['assets/js/**/*.js'])
+  gulp.src(['assets/js/main.min.js'])
     .pipe(gulp.dest('_site/assets/js/'))
     .pipe(browserSync.reload({stream:true}));
 });
