@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<div class="ui three column doubling stackable grid">
+<h1 class="ui header top">Répertoire des usecases <strong>CaritatHelp</strong></h1>
+<div id="index-grid" class="ui three column doubling stackable grid">
   {% for links in site.pages %}
     {% if links.layout == 'usecase' %}
       <section class="{{links.ref}} column">
