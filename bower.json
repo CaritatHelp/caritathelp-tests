@@ -1,0 +1,25 @@
+{
+  "name": "caritathelp-test",
+  "description": "Site pour répertorier les tests de CaritatHelp",
+  "main": "index.html",
+  "authors": [
+    "Nicolas"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "test",
+    "caritathelp"
+  ],
+  "homepage": "https://github.com/chypriote/chypriote.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

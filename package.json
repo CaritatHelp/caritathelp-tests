@@ -1,0 +1,34 @@
+{
+  "name": "caritathelp-test",
+  "version": "0.1.0",
+  "description": "Site pour répertorier les tests de CaritatHelp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chypriote/chypriote.github.io.git"
+  },
+  "keywords": [
+    "test",
+    "caritathelp"
+  ],
+  "author": "Nicolas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chypriote/chypriote.github.io/issues"
+  },
+  "homepage": "https://github.com/chypriote/chypriote.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-less": "^3.0.4",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.1",
+    "run-sequence": "^1.1.4"
+  }
+}

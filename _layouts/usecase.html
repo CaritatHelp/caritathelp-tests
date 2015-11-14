@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="ui grid" id="post-list">
+	<section class="eight wide column">
+		<h1 class="ui header">
+			<i class="{{page.icon}} icon"></i> {{page.title}}
+		</h1>
+		{% for post in site.categories.[{{page.ref}}] %}
+		  <div class="ui styled accordion">
+		    <a class="post-link" href="#{{page.ref}}-{{post.id}}">
+		      <div class="title">{{ post.title }}</div>
+		    </a>
+		  </div>
+		{% endfor %}
+	</section>
+	<section class="eight wide column">
+		<h1 class="ui header">
+			<i class="zoom icon"></i> Description du test
+		</h1>
+		{% for post in site.categories.[{{page.ref}}] %}
+			<article class="ui card" id="{{page.ref}}-{{post.id}}" style="display: none;">
+				<div class="content">
+					<h2 class="header">{{post.title}}</h2>
+				</div>
+				<div class="content">
+					{{post.content}}
+				</div>
+			</article>
+		{% endfor %}
+	</section>
+</div>
+
+<!-- {# post.url | prepend: site.baseurl #} -->
+

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="ui three column doubling stackable grid">
+  {% for links in site.pages %}
+    {% if links.layout == 'usecase' %}
+      <section class="{{links.ref}} column">
+        <h3 class="ui header">
+          <i class="{{links.icon}} icon"></i> {{links.title}}
+        </h3>
+        {% for post in site.categories.[{{links.ref}}] %}
+          <div class="ui styled accordion">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+              <div class="title">{{ post.title }}</div>
+            </a>
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
+  {% endfor %}
+</div>

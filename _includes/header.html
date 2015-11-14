@@ -1,0 +1,22 @@
+{% assign current = page.url | downcase | split: '/' %}
+<header class="ui attached stackable menu">
+  <nav class="ui container">
+    <a class="item" href="{{ site.baseurl }}/">
+      <i class="home icon"></i> Home
+    </a>
+    {% for links in site.pages %}
+     {% if links.layout == 'usecase' %}
+        {% if current[1] == links.ref %}
+          <a class="item active" href="{{ links.url | prepend: site.baseurl }}">
+        {% else %}
+          <a class="item" href="{{ links.url | prepend: site.baseurl }}">
+        {% endif %}
+            <i class="grid {{links.icon}} icon"></i> {{links.title}}
+        </a>
+      {% endif %}
+    {% endfor %}
+    <div class="right item ui search">
+      <div class="ui icon input"><input type="text" placeholder="Search..."><i class="search icon"></i></div>
+    </div>
+  </nav>
+</header>
