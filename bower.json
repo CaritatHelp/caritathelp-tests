@@ -1,7 +1,7 @@
 {
   "name": "caritathelp-test",
   "description": "Site pour répertorier les tests de CaritatHelp",
-  "main": "index.html",
+  "main": "index.html", 
   "authors": [
     "Nicolas"
   ],
